@@ -24,9 +24,16 @@
         }
       },
       {
+        "key": "gender",
+        "type": {
+          "name": "String",
+          "required": false
+        }
+      },
+      {
         "key": "id",
         "type": {
-          "name": "ID",
+          "name": "String",
           "required": true
         }
       }

@@ -1,10 +1,15 @@
 import mongoose from "mongoose";
 import schemaKeys from "./schemaKeys.json";
 
-export const user = mongoose.model("user", { schema });
+const entity = schemaKeys.filter((itm) => itm.entity === "user");
+const schema = entity[0].schema.map((row, idx) => {
+  return `${idx > 0 ? "," : ""}${row.key}:${row.type.name}`;
+});
 
-const schema = schemaKeys
-  .filter((itm) => itm.entity == "user")
-  .schema.map((row, idx) => {
-    return `${idx > 0 ? "," : ""}${row.key}:${row.type.name}`;
-  });
+//export const user = mongoose.model("user", { schema });
+export const user = mongoose.model("user", {
+  name: "String",
+  address: "String",
+  mobile: "String",
+  id: "String",
+});

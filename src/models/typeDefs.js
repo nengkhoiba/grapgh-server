@@ -2,7 +2,6 @@ import { gql } from "apollo-server-express";
 import schemaKeys from "./schemaKeys.json";
 export const typeDefs = gql`
   type Query {
-    cat:cat
     ${schemaKeys.map((row, idx) => {
       return row.entity + ":" + row.entity;
     })}
@@ -15,12 +14,7 @@ export const typeDefs = gql`
 
     }`;
   })}
-  type cat {
-    name: String!
-  }
-
   type Mutation {
-    create_cat(name:String!,entity:String!):user!
     ${schemaKeys.map((row, idx) => {
       return `create_${row.entity}(
             ${row.schema.map((sch, indx) => {
