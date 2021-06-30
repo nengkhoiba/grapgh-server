@@ -1,0 +1,68 @@
+[
+  {
+    "entity": "user",
+    "schema": [
+      {
+        "key": "name",
+        "type": {
+          "name": "String",
+          "required": true
+        }
+      },
+      {
+        "key": "address",
+        "type": {
+          "name": "String",
+          "required": true
+        }
+      },
+      {
+        "key": "mobile",
+        "type": {
+          "name": "String",
+          "required": true
+        }
+      },
+      {
+        "key": "id",
+        "type": {
+          "name": "ID",
+          "required": true
+        }
+      }
+    ]
+  },
+  {
+    "entity": "doctors",
+    "schema": [
+      {
+        "key": "name",
+        "type": {
+          "name": "String",
+          "required": true
+        }
+      },
+      {
+        "key": "address",
+        "type": {
+          "name": "String",
+          "required": true
+        }
+      },
+      {
+        "key": "mobile",
+        "type": {
+          "name": "String",
+          "required": true
+        }
+      },
+      {
+        "key": "id",
+        "type": {
+          "name": "ID",
+          "required": true
+        }
+      }
+    ]
+  }
+]
