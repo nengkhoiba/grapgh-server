@@ -5,6 +5,13 @@
       {
         "key": "name",
         "type": {
+          "name": "String"
+        },
+        "defaultValue":"Loki"
+      },
+      {
+        "key": "fatherName",
+        "type": {
           "name": "String",
           "required": true
         }
